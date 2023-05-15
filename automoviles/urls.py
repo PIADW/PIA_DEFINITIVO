@@ -3,4 +3,6 @@ from . import views
 
 urlpatterns = [
     # path(ruta y/o nombre en la ruta, vista, nombre)
-    path('', views.index, name='index'),]
+    # path('', views.index, name='index'),
+    path('automoviles_envios/', views.automoviles_envios, name='automoviles_envios'),
+]

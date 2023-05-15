@@ -8,5 +8,13 @@
 </head>
 <body>
     <h1>Clientes satisfechos</h1>
+    <!-- Esta recorriendo el modelo con un for -->
+    {% for clientes in clientes %}
+    <h2>{{clientes.Nombre}}</h2>
+    <h2>{{clientes.Apellidos}}</h2>
+    <h2>{{clientes.Correo}}</h2>
+    <h2>{{clientes.TipoCliente}}</h2>
+    <br>
+    {% endfor %}
 </body>
 </html>

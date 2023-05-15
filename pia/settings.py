@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'automoviles.apps.AutomovilesConfig',
     'sucursales.apps.SucursalesConfig',
     'clientes.apps.ClientesConfig',
-    'postres.apps.PostresConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

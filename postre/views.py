@@ -7,11 +7,3 @@ def index(request):
 def contacto(request):
     return render(request,"contacto.html")
 
-def recetas(request):
-    return HttpResponse("<h1>Pagina de las recetas</h1>")
-
-def top_10(request):
-    return HttpResponse("<h1>Los postres mas vendidos</h1>")
-
-def ofertas(request):
-    return HttpResponse("<h1>OFERTONES</h1>")

@@ -6,21 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de contacto</title>
-    <link rel="stylesheet" href="{% static 'css/estilos2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contacto.css' %}">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="{}">Contacto</a></li>
-                <li><a href="#">Recetas</a></li>
+    <header class="header">
+        <nav class="navbar">
+            
+            <h1 class="logo">Postres Las Delicias</h1>
+            <ul class="menu">
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a class="activa" href="#">Contacto</a></li>
+                <li><a href="{% url 'sucursales' %}">Sucursales</a></li>
                 <li><a href="#">Top 10</a></li>
                 <li><a href="#">Ofertas</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+
+   <!--  <main>
         <h1>Pagina de contacto</h1>
         <img src="{% static 'img/Postre.JPG' %}" alt="">
     </main>
@@ -28,6 +31,6 @@
         <address>
             <p>Avenida san pedro</p>
         </address>
-    </footer>
+    </footer> -->
 </body>
 </html>

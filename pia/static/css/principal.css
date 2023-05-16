@@ -62,7 +62,7 @@ body {
 
 .inicio{
     height: 100vh;
-    background: url('/static/img/fondo.jpg') no-repeat;
+    background: url('/static/img/fondos.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;

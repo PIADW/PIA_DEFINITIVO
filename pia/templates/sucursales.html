@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es-mx">
 <head>
@@ -5,8 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sucursales</title>
+    <link rel="stylesheet" href="{% static 'css/sucursales.css' %}">
 </head>
 <body>
-    <h1>Localiza nuestras sucursales</h1>
+    <header class="header">
+        <nav class="navbar">
+            
+            <h1 class="logo">Postres Las Delicias</h1>
+            <ul class="menu">
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                <li><a class="activa" href="#">Sucursales</a></li>
+                <li><a href="#">Top 10</a></li>
+                <li><a href="#">Ofertas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <!--  <h1>Localiza nuestras sucursales</h1> -->
+
 </body>
 </html>

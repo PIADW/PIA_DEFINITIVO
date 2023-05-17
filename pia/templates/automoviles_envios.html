@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es-mx">
 <head>
@@ -5,8 +6,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>servicio de envios</title>
+    <link rel="stylesheet" href="{% static 'css/automoviles.css' %}">
 </head>
 <body>
-    <h1>Clase de vehiculo para envio</h1>
+    <header class="header">
+        <nav class="navbar">
+            
+            <h1 class="logo">Postres Las Delicias</h1>
+            <ul class="menu">
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                <li><a href="{% url 'automoviles_envios' %}">Sucursales</a></li>
+                <li><a href="{% url 'clientes' %}">Clientes</a></li>
+                <li><a class="activa" href="#">Automoviles de envios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="inicio">
+        <div class="contenido">
+            <h1>¡Autmovlies con los que contamos para envios!</h1>
+            <p>Actualmente contamos unicamente con tres automoviles para hacer envios y enntregas a cualquier municipio de Nuevo Leon, de momento aun no contamos con enovios fuera de nuestro Estado, pero pronto trataremos de expandirnos a mas partes de nuestro pais</p>
+        </div>
+        <div class="conteiner">
+            
+            <div class="card">
+                <figure>
+                    <img src="{% static 'img/KIA Forte.jpg' %}" alt="">
+                </figure>
+                <div class="contenido">
+                    <h3>Andrés Gonzales</h3>
+                    <h3>Placa: abd-123-a</h3>
+                    <h3>Marca: KIA</h3>
+                    <h3>Modelo: KIA Forte</h3>
+                    <h3>Año: 2002</h3>
+                </div>
+            </div>
+            <div class="card">
+                <figure>
+                    <img src="{% static 'img/Tornado Van.jpg' %}" alt="">
+                </figure>
+                <div class="contenido">
+                    <h3>Juan Acosta</h3>
+                    <h3>Placa: agd-145-z/h3>
+                    <h3>Marca: Chevrolet</h3>
+                    <h3>Modelo: Tornado Van/h3>
+                    <h3>Año: 2023</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <figure>
+                    <img src="{% static 'img/Ford.jpg' %}" alt="">
+                </figure>
+                <div class="contenido">
+                    <h3>Juan Quintero</h3>
+                    <h3>Placa: drt-267-y</h3>
+                    <h3>Marca: Ford</h3>
+                    <h3>Modelo: F-350</h3>
+                    <h3>Año: 2006</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
 </body>
 </html>

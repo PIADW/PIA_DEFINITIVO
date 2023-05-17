@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es-mx">
 <head>
@@ -5,19 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clientes</title>
+    <link rel="stylesheet" href="{% static 'css/cliente.css' %}">
 </head>
 <body>
-    <h1>Clientes satisfechos</h1>
-    <!-- Esta recorriendo el modelo con un for -->
-    {% for clientes in clientes %}
-    <h2>{{clientes.Nombre}}</h2>
-    <h2>{{clientes.Apellidos}}</h2>
-    <h2>{{clientes.Correo}}</h2>
-    <h2>{{clientes.TipoCliente}}</h2>
-    <br>
-    {% endfor %}
+    <header class="header">
+        <nav class="navbar">
+            <h1 class="logo">Postres Las Delicias</h1>
+            <ul class="menu">
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'clientes' %}">Contacto</a></li>
+                <li><a href="{% url 'sucursales' %}">Sucursales</a></li>
+                <li><a class="activa" href="#">Clientes</a></li>
+                <li><a href="{% url 'automoviles_envios' %}">Automoviles de envios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="contenedor">
+        <div class="info">
+            <h1>Clientes satisfechos</h1>
+            <br>
+            <!-- Esta recorriendo el modelo con un for -->
+            <!-- {% for clientes in clientes %}
+            <h2>Nombre: {{clientes.Nombre}}</h2>
+            <h2>Apellidos: {{clientes.Apellidos}}</h2>
+            <h2>Correo: {{clientes.Correo}}</h2>
+            <h2>Tipo de cliente: {{clientes.TipoCliente}}</h2>
+            <br>
+            {% endfor %}
 
-    {% if clientes.TipoCliente %}
-    {% endif %}
+            {% if clientes.TipoCliente %}
+            {% endif %} -->
+
+            <div class="contenedor-clientes">
+                {% for clientes in clientes %}
+                  <div class="cliente">
+                    <h2 class="nombre">Nombre: {{ clientes.Nombre }}</h2>
+                    <h2 class="apellidos">Apellidos: {{ clientes.Apellidos }}</h2>
+                    <h2 class="correo">Correo: {{ clientes.Correo }}</h2>
+                    <h2 class="tipo-cliente">Tipo de cliente: {{ clientes.TipoCliente }}</h2>
+                  </div>
+                {% endfor %}
+            </div>
+              
+        </div>
+    </section>
+
 </body>
 </html>

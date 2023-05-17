@@ -20,7 +20,7 @@ body {
 
 .menu{
     display: flex;
-    width: 40%;
+    width: 50%;
     justify-content: space-around;
 }
 
@@ -62,7 +62,7 @@ body {
 
 .inicio{
     height: 100vh;
-    background: url('/static/img/fondos.jpg') no-repeat;
+    background: url('/static/img/fondoP.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
